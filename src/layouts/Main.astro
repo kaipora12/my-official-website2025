@@ -1,3 +1,8 @@
+---
+import Carousel from "../components/Carousel.astro";
+import "../styles/global.css";
+---
+
 <main class="main">
   <section class="main-visual">
     <div class="main-text">
@@ -6,7 +11,8 @@
     </div>
   </section>
   <section class="topicks">
-    
+    <h1>PICK UP TOPICKS</h1>
+    <Carousel />
   </section>
 
 
@@ -54,5 +60,18 @@
   font-family: "Zen Maru Gothic", serif;
   font-weight: 300;
   font-style: normal;
+}
+
+.topicks{
+
+}
+.topicks h1 {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 40px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
   </style>
