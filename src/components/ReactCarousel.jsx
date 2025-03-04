@@ -20,7 +20,7 @@ const Carousel = () => {
         slidesPerView={3}
         loop={true}
         loopAdditionalSlides={1}
-        pagination={{ clickable: true }} // ✅ ページネーション有効
+        pagination={{ clickable: true }} 
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         breakpoints={{
           640: { slidesPerView: 1 },
