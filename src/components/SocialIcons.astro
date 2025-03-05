@@ -1,23 +1,24 @@
 ---
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faTiktok, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faTiktok, faYoutube, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const xiaohongshuIcon = "/images/red.png";
+const wearIcon = "/images/wear.png";
 ---
 
 <div class="social-icons">
   <!-- Instagram -->
-  <a href="https://www.instagram.com/your_username" target="_blank" rel="noopener noreferrer">
+  <a href="https://www.instagram.com/pacific_kai.12" target="_blank" rel="noopener noreferrer">
     <FontAwesomeIcon icon={faInstagram} size="2x" />
   </a>
 
   <!-- TikTok -->
-  <a href="https://www.tiktok.com/@your_username" target="_blank" rel="noopener noreferrer">
+  <a href="https://www.tiktok.com/@pacific_kai.12" target="_blank" rel="noopener noreferrer">
     <FontAwesomeIcon icon={faTiktok} size="2x" />
   </a>
 
   <!-- YouTube -->
-  <a href="https://www.youtube.com/@your_username" target="_blank" rel="noopener noreferrer">
+  <a href="https://youtube.com/@pacifickai_world?si=Z_EEfs5i6lvKz3qa" target="_blank" rel="noopener noreferrer">
     <FontAwesomeIcon icon={faYoutube} size="2x" />
   </a>
 
@@ -26,6 +27,17 @@ const xiaohongshuIcon = "/images/red.png";
     <img src={xiaohongshuIcon} alt="Xiaohongshu" class="custom-icon" />
   </a>
 
+    <!-- WEAR -->
+    <a href="https://https://wear.jp/itskai12" target="_blank" rel="noopener noreferrer">
+        <img src={wearIcon} alt="WEAR" class="custom-icon wear-icon" />
+      </a>
+
+    <!-- GitHub -->
+    <a href="https://github.com/kaipora12" target="_blank" rel="noopener noreferrer">
+        <FontAwesomeIcon icon={faGithub} size="2x" class="icon" />
+      </a>
+
+    <!-- spotify -->
   <p><a href="">COMING SOON</a></p>
 </div>
 
@@ -55,7 +67,10 @@ const xiaohongshuIcon = "/images/red.png";
   .custom-icon:hover {
     transform: scale(1.1);
   }
-
+    .wear-icon {
+    width: 50px; /* WEARのアイコンサイズ */
+    height: auto;
+  }
 
   p {
     font-family: 'Oswald', sans-serif;
