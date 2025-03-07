@@ -1,84 +1,76 @@
 <header>
-    <div class="header-left">
-        <h1>KAI NAKAMURA</h1>
-    </div>
+  <div class="header-left">
+      <h1><a href="/" class="top-link">KAI NAKAMURA</a></h1>
+  </div>
 
-    <div id="header-right">
-        <ul class="nav">
-            <li><a href="">NEWS</a></li>
-            <li><a href="/biography">BIOGRAPHY</a></li>
-            <li><a href="">WORKS</a></li>
-            <li><a href="">CONTACT</a></li>
-        </ul> 
-    </div>
+  <div id="header-right">
+      <ul class="nav">
+          <li><a href="/menu">MENU</a></li>
+          <li><a href="/biography">BIOGRAPHY</a></li>
+          <li><a href="/works">WORKS</a></li>
+          <li><a href="/contact">CONTACT</a></li>
+      </ul> 
+  </div>
 </header>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
-@-webkit-keyframes openingKv {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes openingKv {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+
+/* リセット */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
-*{
-  margin: 0;
-  padding: 0;
-}
-
+/* ヘッダーをスクロール固定 */
 header {
-background: black;
-display: flex;
-flex-direction: row;
-top: 0;
-left: 0;
-right: 0;
-width: 100%;
-justify-content: space-between;
-align-items: center;
-height: 90px;
+  background: black;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  padding: 0 20px;
+  z-index: 1000; /* 他の要素より前に表示 */
 }
 
-
-.header-left {
+/* ロゴのスタイル */
+.header-left a {
   color: white;
   font-size: 30px;
-  padding-left: 25px;
   font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
 }
 
-.h1 {
-  margin-left: 10px;
+.header-left a:hover {
+  opacity: 0.7;
 }
 
+/* ナビゲーションメニュー */
 .nav {
   display: flex;
   list-style: none;
 }
 
+/* メニューのスタイル */
 .nav > li > a {
   color: white;
   font-size: 15px;
-  margin: 25px;
+  margin: 15px;
   text-decoration: none;
   font-family: 'Oswald', sans-serif;
-}
-
-.nav > li > a {
   position: relative;
+  padding-bottom: 5px;
 }
 
+/* ナビゲーションのホバーエフェクト */
 .nav li a::after {
   content: '';
   position: absolute;
@@ -86,14 +78,19 @@ height: 90px;
   left: 10%;
   width: 80%;
   height: 2px;
-  background:white;
-  transition: all .3s;
-  transform: scale(0, 1);
-  transform-origin: center top;
+  background: white;
+  transition: all 0.3s;
+  transform: scaleX(0);
+  transform-origin: center;
 }
 
-.nav li.current a::after,
-.nav li a:hover::after {
-    transform: scale(1, 1);
+.nav li a:hover::after,
+.nav li.current a::after {
+  transform: scaleX(1);
+}
+
+/* メインコンテンツに余白を作る（ヘッダーが固定なので） */
+main {
+  padding-top: 100px; /* ヘッダーの高さ分の余白を確保 */
 }
 </style>
