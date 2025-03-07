@@ -1,0 +1,99 @@
+<header>
+    <div class="header-left">
+        <h1>KAI NAKAMURA</h1>
+    </div>
+
+    <div id="header-right">
+        <ul class="nav">
+            <li><a href="">NEWS</a></li>
+            <li><a href="/biography">BIOGRAPHY</a></li>
+            <li><a href="">WORKS</a></li>
+            <li><a href="">CONTACT</a></li>
+        </ul> 
+    </div>
+</header>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@-webkit-keyframes openingKv {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes openingKv {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+header {
+background: black;
+display: flex;
+flex-direction: row;
+top: 0;
+left: 0;
+right: 0;
+width: 100%;
+justify-content: space-between;
+align-items: center;
+height: 90px;
+}
+
+
+.header-left {
+  color: white;
+  font-size: 30px;
+  padding-left: 25px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.h1 {
+  margin-left: 10px;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+}
+
+.nav > li > a {
+  color: white;
+  font-size: 15px;
+  margin: 25px;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+}
+
+.nav > li > a {
+  position: relative;
+}
+
+.nav li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background:white;
+  transition: all .3s;
+  transform: scale(0, 1);
+  transform-origin: center top;
+}
+
+.nav li.current a::after,
+.nav li a:hover::after {
+    transform: scale(1, 1);
+}
+</style>

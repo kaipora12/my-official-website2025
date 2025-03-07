@@ -1,0 +1,81 @@
+---
+import Carousel from "../components/Carousel.astro";
+// import SocialIcons from "../components/SocialIcons.astro";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import "../styles/global.css";
+---
+
+<main class="main">
+  <section class="main-visual">
+    <div class="main-text">
+      <h1>K A I&emsp;N A K A M U R A</h1>
+      <p class="sb-txt">Official site</p>
+    </div>
+  </section>
+  <section class="topicks">
+    <h1>PICK UP TOPICKS</h1>
+    <Carousel />
+    <FontAwesomeIcon icon={faTwitter} size="2x" client:load />
+  </section>
+
+
+    <slot />
+  </main>
+ 
+  <style>
+    .main {
+      background-color: black;
+    }
+    .main-visual {
+  background-image: url(/images/main-bg.JPG);
+  height: 100vh;
+  width: 100%;
+  margin: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+  justify-content: flex-end;
+  -webkit-animation: openingKv 5s ease both;
+          animation: openingKv 5s ease both;
+}
+
+.main-text {
+  position: absolute;
+  top: 80%; /* 50% から 55% に変更して少し下へ */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+.sb-txt {
+  font-size: 4rem;
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.topicks{
+
+}
+.topicks h1 {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 40px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+  </style>
