@@ -80,4 +80,26 @@ const wearIcon = "/images/wear.png";
   p {
     font-family: 'Oswald', sans-serif;
   }
+  @media screen and (max-width: 480px) {
+  .social-icons {
+    gap: 15px; /* アイコン間隔を狭くする */
+  }
+
+  .social-icons a svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .custom-icon {
+    width: 30px;
+  }
+
+  .wear-icon {
+    width: 35px;
+  }
+  .social-icons a:hover {
+    transform: scale(1.1); /* ホバー時に拡大 */
+  }
+  
+}
 </style>
