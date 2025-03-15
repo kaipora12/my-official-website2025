@@ -43,7 +43,7 @@ import "../styles/global.css";
         <li>2021年 Seed Teach School online 卒業</li>
         <li>2022年 日本だけではなく海外への活動を広げる為に東京へ上京。</li>
         <li>2022年 アルバイトからデザイナーとして実務経験を積む。</li>
-        <li>2024年 UI/UXデザイナーとして実務経験を積む。エンジニアは修行中。</li>
+        <li>2024年 UI/UXデザイナーの実務経験を積む。エンジニアは修行中。</li>
         <li>2025年 UI/UXデザイナーと動画クリエイターとして独立</li>
         <li>2025年 YouTube・TikTokその他SNS開設。</li>
     </ul>
@@ -63,8 +63,9 @@ import "../styles/global.css";
         text-align: center;
         font-size: 50px;
         font-family: 'Oswald', sans-serif;
-        padding: 40px 40px 40px 40px;
-        margin-top: 60px;
+        /* padding: 40px 40px 40px 40px; */
+        margin-top: 120px;
+        margin-bottom: 30px;
     }
 
 .picture {
@@ -125,8 +126,8 @@ import "../styles/global.css";
 
 @media screen and (max-width:600px) {
   .picture {
-    width: 40vh;
-    height: 50vh;
+    width: 30vh;
+    height: 40vh;
   }
 }
 
@@ -186,6 +187,44 @@ import "../styles/global.css";
 .main {
   padding-top: 30px;
   padding-bottom: 100px;
+}
+
+/* スマホ表示（480px以下） */
+@media screen and (max-width: 480px) {
+  .biograhy{
+    font-size: 40px;
+  }
+  .picture {
+    width: 90%;
+    height: 50vh;
+    /* margin-bottom: 150px; */
+  }
+
+  .photo {
+    font-size: 12px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .name {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+
+  .txt {
+    font-size: 12px;
+    padding: 0 15px;
+    margin-bottom: 20px;
+  }
+
+  .main {
+    padding-bottom: 50px;
+  }
+
+  p {
+    text-align: right;
+    margin-right: 10px;
+  }
 }
 
 </style>
